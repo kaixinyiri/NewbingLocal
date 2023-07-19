@@ -30,26 +30,7 @@
     <link rel="stylesheet" href="./css/highlight.js.default.min.css">
     <link rel="stylesheet" href="./css/bing.css">
     <script>	
-    	let content = document.getElementById("content123");
-	// 获取内容元素的文本内容
-	let originalText = content.textContent;
-	console.log(originalText); 
-	content.textContent = originalText.slice(0, 100);
-       // 获取复制按钮元素
-     	let copyButton = document.getElementById("copy-button");
-    	// 给复制按钮元素添加一个 click 事件监听器
-    	copyButton.addEventListener("click", function() {      
-        	let tempInput = document.createElement("input");
-        	tempInput.value = originalText;
-        	// 将临时输入框元素添加到文档中，并选中它的文本内容
-        	document.body.appendChild(tempInput);
-        	tempInput.select();
-        	// 执行复制命令，并提示用户已经复制成功
-        	document.execCommand("copy");
-        	alert("已经复制成功");
-        	console.log("复制了内容"); // 打印一条信息，表示复制了内容
-        	// 将临时输入框元素从文档中移除
-        	document.body.removeChild(tempInput);    
+    	
     // 定义一个函数，根据图片的src属性来输入不同的文字	   
     const GRAMMARGPT_INTRO = `
 请模拟下面角色
@@ -647,6 +628,30 @@ function inputTextByImage(image) {
         </div>
     </div>
 </div>
+
+
+<script>
+	let content = document.getElementById("content123");
+	// 获取内容元素的文本内容
+	let originalText = content.textContent;
+	console.log(originalText); 
+	content.textContent = originalText.slice(0, 100);
+       // 获取复制按钮元素
+     	let copyButton = document.getElementById("copy-button");
+    	// 给复制按钮元素添加一个 click 事件监听器
+    	copyButton.addEventListener("click", function() {      
+        	let tempInput = document.createElement("input");
+        	tempInput.value = originalText;
+        	// 将临时输入框元素添加到文档中，并选中它的文本内容
+        	document.body.appendChild(tempInput);
+        	tempInput.select();
+        	// 执行复制命令，并提示用户已经复制成功
+        	document.execCommand("copy");
+        	alert("已经复制成功");
+        	console.log("复制了内容"); // 打印一条信息，表示复制了内容
+        	// 将临时输入框元素从文档中移除
+        	document.body.removeChild(tempInput);    
+</script>
 </body>
 
 </html>
