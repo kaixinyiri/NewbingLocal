@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>案例展示</title>
+  <style>
+    h1, ul, li {
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>英语</h1>
+  <ul>
+    <li><a href="./i-think.html">i think及时态</a></li>
+    <li><a href="https://www.bing.com/search?q=英语词汇">英语词汇</a></li>
+    <li><a href="https://www.bing.com/search?q=英语阅读">英语阅读</a></li>
+  </ul>
+</body>
+</html>
