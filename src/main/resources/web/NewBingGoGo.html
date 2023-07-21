@@ -692,14 +692,21 @@ for (let i = 0; i < buttons.length; i++) {
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
-    alert("密码复制成功！点击确定进行网址跳转！");
-    console.log("复制了内容");
-    document.body.removeChild(tempInput);
-   // 跳转到另外一个网址，假设是 https://chatok.nwtbing.asia
-    window.location.href = "https://chatok.nwtbing.asia";
+
+   // 判断 i 的值是否小于 3
+    if (i < 3) {
+      alert("密码复制成功！点击确定进行网址跳转！");
+      console.log("复制了内容");
+      document.body.removeChild(tempInput);
+     // 跳转到另外一个网址，假设是 https://chatok.nwtbing.asia
+      window.location.href = "https://chatok.nwtbing.asia";
+    } else {
+      alert("该账号目前未开放，请选择其他账号！");
+      console.log("未开放的按钮");
+      document.body.removeChild(tempInput);
+    }
   });
 }
-
 		
 </script>
 
