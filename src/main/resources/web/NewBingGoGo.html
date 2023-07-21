@@ -690,11 +690,12 @@ for (let i = 0; i < buttons.length; i++) {
       console.log("111111111111111");
      console.log(tempInput.value); 
     document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
+    
 
    // 判断 i 的值是否小于 3
     if (i < 3) {
+    tempInput.select();
+    document.execCommand("copy");
       alert("密码复制成功！点击确定进行网址跳转！");
       console.log("复制了内容");
       document.body.removeChild(tempInput);
